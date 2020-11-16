@@ -15,11 +15,14 @@ public class Task {
     }
 
     /**
+     * At each step, the array is divided in half
+     * While there are permutations and array isn't sorted, compare the elements on the interval 'q'
+     * Reduce the sorting step by 2 times
      *
-     * @param a initial array
-     * @param p start of second array
-     * @param q step
-     * @param r end of second array
+     * @param a the initial array
+     * @param p the minimum array length
+     * @param q interval and sort step
+     * @param r the array length
      */
     private static void merge(int[] a, int p, int q, int r) {
         while (q >= p) {
@@ -37,9 +40,9 @@ public class Task {
     /**
      * Swaps the first element and the second
      *
-     * @param a      array
-     * @param first  first element of array
-     * @param second second element of array
+     * @param a      the array
+     * @param first  the first element of array
+     * @param second the second element of array
      */
     private static void swap(int[] a, int first, int second) {
         int temp  = a[second];
